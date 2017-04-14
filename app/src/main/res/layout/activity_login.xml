@@ -31,9 +31,17 @@
         android:id="@+id/campo_password"
         android:layout_below="@+id/label_password"/>
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keep_me_signed_in"
+        android:id="@+id/campo_manter_conectado"
+        android:layout_below="@id/campo_password"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login"
-        android:layout_below="@+id/campo_password"/>
+        android:layout_below="@+id/campo_manter_conectado"
+        android:onClick="login"/>
 </RelativeLayout>

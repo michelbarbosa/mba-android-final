@@ -8,4 +8,7 @@
     <string name="rust">Rust</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
+    <string name="keep_me_signed_in">Keep me signed in</string>
+    <string name="invalid_login_and_or_pass">Invalid login and/or password</string>
+    <string name="logout">Logout</string>
 </resources>
