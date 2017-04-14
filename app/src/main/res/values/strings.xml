@@ -6,4 +6,6 @@
 
     <string name="action_settings">Settings</string>
     <string name="rust">Rust</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
 </resources>

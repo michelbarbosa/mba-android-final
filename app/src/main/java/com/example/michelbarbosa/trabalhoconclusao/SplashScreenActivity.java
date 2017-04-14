@@ -1,11 +1,19 @@
 package com.example.michelbarbosa.trabalhoconclusao;
 
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.michelbarbosa.trabalhoconclusao.dao.UsuarioDao;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -17,6 +25,8 @@ import java.net.URL;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
+    private final int ANIMATION_TIME = 3500;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +37,15 @@ public class SplashScreenActivity extends AppCompatActivity {
         ImageView logo = (ImageView) findViewById(R.id.splash);
         logo.clearAnimation();
         logo.startAnimation(animation);
+        new Handler().postDelayed(new AfterAnimation(), ANIMATION_TIME);
+    }
+
+    private class AfterAnimation implements Runnable {
+
+        @Override
+        public void run() {
+            new Query().execute("http://www.mocky.io/v2/58b9b1740f0000b614f09d2f");
+        }
     }
 
     private class Query extends AsyncTask<String, Void, String> {
@@ -55,6 +74,25 @@ public class SplashScreenActivity extends AppCompatActivity {
             } catch (java.io.IOException e) {
                 e.printStackTrace();
                 return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            if (s == null) {
+                Toast.makeText(SplashScreenActivity.this, "Houve um problema ao carregar o usuário", Toast.LENGTH_LONG).show();
+            }
+            try {
+                JSONObject json = new JSONObject(s);
+                String usuario = json.getString("usuario");
+                String senha = json.getString("senha");
+                new UsuarioDao(SplashScreenActivity.this).save(usuario, senha);
+                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                SplashScreenActivity.this.finish();
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         }
     }
