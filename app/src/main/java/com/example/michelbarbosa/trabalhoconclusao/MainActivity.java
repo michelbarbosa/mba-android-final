@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_filmes) {
             goTo(FilmesActivity.class);
         }
+        else if (id == R.id.nav_about) {
+            goTo(AboutActivity.class);
+        }
         else if (id == R.id.nav_logout) {
             logout();
         }
@@ -100,7 +103,6 @@ public class MainActivity extends AppCompatActivity
     private void goTo(Class activity) {
         Intent intent = new Intent(this, activity);
         startActivity(intent);
-        finish();
     }
 
     private void logout() {

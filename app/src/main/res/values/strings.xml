@@ -28,4 +28,5 @@
     <string name="editar">Edit</string>
     <string name="excluir">Delete</string>
     <string name="filmes">Movies</string>
+    <string name="sobre">About</string>
 </resources>

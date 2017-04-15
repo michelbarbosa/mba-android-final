@@ -9,6 +9,9 @@
             android:id="@+id/nav_filmes"
             android:title="@string/filmes" />
         <item
+            android:id="@+id/nav_about"
+            android:title="@string/sobre" />
+        <item
             android:id="@+id/nav_logout"
             android:title="@string/logout" />
     </group>

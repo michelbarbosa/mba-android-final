@@ -46,12 +46,9 @@ public class FormularioActivity extends AppCompatActivity {
     public void salvar(View view) {
         Filme filme = criarFilme();
         dao.save(filme);
-        goToMain();
-    }
-
-    @Override
-    public void onBackPressed() {
-        goToMain();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private Filme criarFilme() {
@@ -60,11 +57,5 @@ public class FormularioActivity extends AppCompatActivity {
         String sinopse = campoSinopse.getText().toString();
         int ano = Integer.parseInt(campoAno.getText().toString());
         return new Filme(id, titulo, ano, genero, sinopse);
-    }
-
-    private void goToMain () {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
     }
 }
