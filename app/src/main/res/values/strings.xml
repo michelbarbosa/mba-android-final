@@ -5,12 +5,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="rust">Rust</string>
-    <string name="login">Login</string>
+    <string name="rust" translatable="false">Rust</string>
+    <string name="login" translatable="false">Login</string>
     <string name="password">Password</string>
     <string name="keep_me_signed_in">Keep me signed in</string>
     <string name="invalid_login_and_or_pass">Invalid login and/or password</string>
-    <string name="logout">Logout</string>
+    <string name="logout" translatable="false">Logout</string>
     <string name="use_menu_navegacao_escolher_opcoes">Use the navigation menu to choose one of the available options</string>
     <string name="titulo">Title</string>
     <string name="ano">Year</string>

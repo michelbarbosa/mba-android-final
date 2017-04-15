@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrabalhoConclusao</string>
+    <string name="action">Ação</string>
+    <string name="adventure">Aventura</string>
+    <string name="ano">Ano</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="comedy">Comédia</string>
+    <string name="drama">Drama</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="filmes">Filmes</string>
+    <string name="genero">Gênero</string>
+    <string name="horror">Terror</string>
+    <string name="invalid_login_and_or_pass">Login e/ou senha inválidos</string>
+    <string name="keep_me_signed_in">Mantenha-me conectado</string>
+    <string name="login"></string>
+    <string name="music">Musical</string>
+    <string name="password">Senha</string>
+    <string name="salvar">Salvar</string>
+    <string name="sinopse">Sinopse</string>
+    <string name="sobre">Sobre</string>
+    <string name="thriller">Suspense</string>
+    <string name="titulo">Título</string>
+    <string name="use_menu_navegacao_escolher_opcoes">Use o menu de navegação para escolher uma das opções disponíveis</string>
+</resources>
