@@ -14,7 +14,7 @@
     <string name="horror">Terror</string>
     <string name="invalid_login_and_or_pass">Login e/ou senha inválidos</string>
     <string name="keep_me_signed_in">Mantenha-me conectado</string>
-    <string name="login"></string>
+    <string name="login">Login</string>
     <string name="music">Musical</string>
     <string name="password">Senha</string>
     <string name="salvar">Salvar</string>
