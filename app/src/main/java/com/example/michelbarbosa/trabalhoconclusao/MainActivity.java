@@ -1,5 +1,6 @@
 package com.example.michelbarbosa.trabalhoconclusao;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -81,13 +82,25 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_logout) {
+        if (id == R.id.nav_cadastro) {
+            goTo(FormularioActivity.class);
+        }
+        else if (id == R.id.nav_filmes) {
+            goTo(FilmesActivity.class);
+        }
+        else if (id == R.id.nav_logout) {
             logout();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void goTo(Class activity) {
+        Intent intent = new Intent(this, activity);
+        startActivity(intent);
+        finish();
     }
 
     private void logout() {
