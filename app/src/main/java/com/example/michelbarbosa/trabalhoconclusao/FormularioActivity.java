@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.michelbarbosa.trabalhoconclusao.dao.FilmeDao;
 import com.example.michelbarbosa.trabalhoconclusao.model.Filme;
@@ -44,18 +45,22 @@ public class FormularioActivity extends AppCompatActivity {
     }
 
     public void salvar(View view) {
-        Filme filme = criarFilme();
-        dao.save(filme);
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        try {
+            Filme filme = criarFilme();
+            dao.save(filme);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        } catch (Exception e) {
+            Toast.makeText(this, R.string.todos_campos_obrigatorios_ano_inteiro, Toast.LENGTH_LONG).show();
+        }
     }
 
     private Filme criarFilme() {
         String titulo = campoTitulo.getText().toString();
         String genero = campoGenero.getSelectedItem().toString();
         String sinopse = campoSinopse.getText().toString();
-        int ano = Integer.parseInt(campoAno.getText().toString());
+        String ano = campoAno.getText().toString();
         return new Filme(id, titulo, ano, genero, sinopse);
     }
 }

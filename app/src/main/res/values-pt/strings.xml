@@ -23,4 +23,5 @@
     <string name="thriller">Suspense</string>
     <string name="titulo">Título</string>
     <string name="use_menu_navegacao_escolher_opcoes">Use o menu de navegação para escolher uma das opções disponíveis</string>
+    <string name="todos_campos_obrigatorios_ano_inteiro">Todos os campos são obrigatórios e o ano deve ser um número inteiro</string>
 </resources>
