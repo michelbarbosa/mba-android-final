@@ -69,7 +69,7 @@ public class FilmeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private class Excluir implements View.OnClickListener {
         private final int position;
 
-        public Excluir(int position) {
+        Excluir(int position) {
             this.position = position;
         }
 

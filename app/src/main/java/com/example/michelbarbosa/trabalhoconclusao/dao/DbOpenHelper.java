@@ -13,12 +13,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class DbOpenHelper extends SQLiteOpenHelper {
+class DbOpenHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "trabalho_final.db";
     private static final int VERSAO_BANCO = 1;
     private Context ctx;
 
-    public DbOpenHelper(Context context) {
+    DbOpenHelper(Context context) {
         super(context, DB_NAME, null, VERSAO_BANCO);
         this.ctx = context;
     }
