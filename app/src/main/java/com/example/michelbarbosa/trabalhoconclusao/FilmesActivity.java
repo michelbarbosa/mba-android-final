@@ -29,5 +29,6 @@ public class FilmesActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FormularioActivity.class);
         intent.putExtra("id", id);
         startActivity(intent);
+        finish();
     }
 }
