@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity
         SharedPreferences.Editor editor = pref.edit();
         editor.remove(LoginActivity.LOGIN_KEY);
         editor.apply();
+        moveTaskToBack(true);
         finish();
     }
 }
